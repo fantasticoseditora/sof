@@ -245,7 +245,7 @@
             <div class="chip"><input type="radio" name="status" id="s3" value="Já escrevi, mas não publiquei"><label for="s3">Já escrevi, não publiquei</label></div>
             <div class="chip"><input type="radio" name="status" id="s4" value="Já publiquei"><label for="s4">Já publiquei</label></div>
           </div>
-          <div class="hint" style="margin-top:8px; margin-bottom:0;" id="status-hint">Se você já escreveu, vamos pedir o capítulo 1 do seu original logo abaixo.</div>
+          <div class="hint" style="margin-top:8px; margin-bottom:0;" id="status-hint">Se você já tem algo escrito — mesmo que ainda esteja escrevendo — vamos pedir o capítulo 1 do seu original logo abaixo.</div>
         </div>
       </div>
 
@@ -297,7 +297,7 @@
   statusRadios.forEach(r => r.addEventListener('change', () => {
     const show = (r.checked && (r.value === 'Já escrevi, mas não publiquei' || r.value === 'Já publiquei'));
     if (r.checked) {
-      uploadSection.style.display = (r.value === 'Já escrevi, mas não publiquei' || r.value === 'Já publiquei') ? 'block' : 'none';
+      uploadSection.style.display = (r.value === 'Estou escrevendo' || r.value === 'Já escrevi, mas não publiquei' || r.value === 'Já publiquei') ? 'block' : 'none';
     }
   }));
 
