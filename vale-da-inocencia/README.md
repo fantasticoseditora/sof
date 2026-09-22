@@ -2,7 +2,7 @@
 
 Landing mobile-first de captação para a leitura gratuita de **O Vale da Inocência — A História Esquecida dos Norús**.
 
-Autor: **Thalles Waichert** (grafia confirmada diretamente pela assinatura de e-mail do autor).
+Autor: **Thalles Gomes Waichert** (forma completa solicitada pelo próprio autor).
 
 ## URL pública
 
