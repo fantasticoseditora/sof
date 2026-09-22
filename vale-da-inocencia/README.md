@@ -15,7 +15,8 @@ URL do QR Code com rastreamento:
 - `index.html`: estrutura semântica da landing.
 - `styles.css`: identidade visual e responsividade.
 - `app.js`: validação, UTMs, envio e liberação pós-cadastro.
-- `config.js`: endpoint e links do PDF/ePub.
+- `config-live.js`: configuração ativa do endpoint e dos links do PDF/ePub.
+- `config.js`: cópia de referência da configuração.
 - `apps-script.gs`: endpoint para registrar leads na Google Sheet privada.
 - `assets/hero-vale-da-inocencia.webp`: hero principal.
 - `assets/hero-vale-da-inocencia.jpg`: fallback do hero.
@@ -32,11 +33,11 @@ QR Code → landing → nome + e-mail + WhatsApp → Google Sheet privada → li
 - Endpoint do Google Apps Script implantado como **App da Web**.
 - Execução: proprietário da planilha.
 - Acesso: qualquer pessoa pode enviar; os leads não ficam públicos.
-- A URL `/exec` está configurada em `config.js`.
+- A URL `/exec` está configurada em `config-live.js`.
 
 ## Conexão restante
 
-Insira em `config.js` as URLs finais de `pdfUrl` e `epubUrl` antes do início da campanha.
+Insira em `config-live.js` as URLs finais de `pdfUrl` e `epubUrl` antes do início da campanha.
 
 ## Dados registrados
 
