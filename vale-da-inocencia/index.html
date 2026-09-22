@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#ead9bc" />
+  <meta name="description" content="Leia gratuitamente O Vale da Inocência — A História Esquecida dos Norús, conto que inspira a adaptação teatral." />
+  <title>O Vale da Inocência — Leitura gratuita</title>
+  <style>
+    :root{
+      --paper:#ead9bc;
+      --paper-light:#f6ecd8;
+      --ink:#18342f;
+      --wine:#7a2f25;
+      --rust:#b6533e;
+      --gold:#d79a43;
+      --teal:#2d6d6e;
+      --deep:#173331;
+      --muted:#735c4a;
+      --line:rgba(52,45,34,.22);
+      --shadow:0 20px 60px rgba(35,28,19,.16);
+      --serif:Georgia,"Times New Roman",serif;
+      --sans:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      color:var(--deep);
+      font-family:var(--serif);
+      background:
+        radial-gradient(circle at 16% 10%, rgba(182,83,62,.18), transparent 22rem),
+        radial-gradient(circle at 90% 5%, rgba(45,109,110,.20), transparent 24rem),
+        linear-gradient(180deg,var(--paper-light),var(--paper));
+      min-height:100vh;
+    }
+    body:before{
+      content:"";
+      position:fixed; inset:0; pointer-events:none; opacity:.22; z-index:-1;
+      background-image:
+        repeating-linear-gradient(0deg,rgba(72,48,25,.07) 0 1px,transparent 1px 4px),
+        repeating-linear-gradient(90deg,rgba(255,255,255,.08) 0 1px,transparent 1px 5px);
+      mix-blend-mode:multiply;
+    }
+    a{color:inherit}
+    .wrap{width:min(1120px,calc(100% - 32px));margin:auto}
+    .hero{padding:22px 0 76px;overflow:hidden;position:relative}
+    .hero:before,.hero:after{
+      content:"";position:absolute;border-radius:50%;filter:blur(1px);opacity:.75;z-index:-1
+    }
+    .hero:before{width:420px;height:420px;background:var(--rust);left:-260px;top:-160px}
+    .hero:after{width:430px;height:430px;background:var(--deep);right:-290px;top:-185px}
+    .eyebrow{
+      display:flex;gap:12px;align-items:center;justify-content:center;
+      font-family:var(--sans);text-transform:uppercase;letter-spacing:.28em;
+      font-size:.72rem;color:var(--muted);margin:10px 0 34px;
+    }
+    .eyebrow:before,.eyebrow:after{content:"";height:1px;width:46px;background:var(--line)}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+    .kicker{font-family:var(--sans);font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--wine);font-weight:800}
+    h1{
+      margin:.35rem 0 .35rem;
+      font-weight:500;text-transform:uppercase;line-height:.84;
+      letter-spacing:.01em;font-size:clamp(3.8rem,9vw,7.5rem);color:var(--ink);
+    }
+    .subtitle{font-size:clamp(1.35rem,2.4vw,2rem);color:var(--wine);margin:0 0 24px}
+    .lead{font-size:clamp(1.08rem,1.7vw,1.32rem);line-height:1.65;max-width:680px;color:#4c4136}
+    .cta-row{display:flex;flex-wrap:wrap;gap:13px;align-items:center;margin-top:30px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:9px;
+      border:0;border-radius:999px;padding:14px 22px;text-decoration:none;
+      font-family:var(--sans);font-weight:800;font-size:.95rem;cursor:pointer;
+      transition:.2s transform,.2s box-shadow,.2s background;
+    }
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:var(--deep);color:#fff;box-shadow:0 12px 30px rgba(23,51,49,.22)}
+    .btn-outline{background:transparent;border:1px solid rgba(23,51,49,.28);color:var(--deep)}
+    .event-line{margin-top:20px;font-family:var(--sans);font-size:.84rem;line-height:1.5;color:var(--muted)}
+    .poster-scene{
+      position:relative;min-height:560px;border-radius:46% 54% 13% 13% / 10% 12% 8% 9%;
+      background:linear-gradient(180deg,#efd6a7 0 25%,#8cb3a4 26% 48%,#376866 49% 100%);
+      box-shadow:var(--shadow);overflow:hidden;border:1px solid rgba(60,52,40,.14)
+    }
+    .poster-scene:after{
+      content:"";position:absolute;inset:0;
+      background:
+        linear-gradient(165deg,transparent 0 61%,rgba(22,44,41,.94) 62% 75%,transparent 76%),
+        repeating-linear-gradient(7deg,rgba(255,255,255,.035) 0 2px,transparent 2px 6px);
+      mix-blend-mode:multiply;
+    }
+    .sun{position:absolute;width:190px;height:190px;border-radius:50%;background:var(--gold);top:170px;left:50%;transform:translateX(-20%);opacity:.92}
+    .cliff{position:absolute;background:#5f8f89;bottom:105px;height:235px;width:54%;clip-path:polygon(0 20%,30% 8%,55% 22%,65% 5%,100% 20%,100% 100%,0 100%)}
+    .cliff.r{right:0;transform:scaleX(-1);background:#2b5f62}
+    .waterfall{position:absolute;left:53%;top:305px;width:26px;height:155px;background:linear-gradient(90deg,#d9e6de,#f7efe0,#b7d4cf);transform:rotate(1deg);opacity:.92}
+    .branch{position:absolute;left:-2%;right:-2%;bottom:88px;height:42px;background:#34281e;transform:rotate(2deg);border-radius:60%}
+    .figures{position:absolute;bottom:105px;left:12%;right:8%;display:flex;align-items:flex-end;justify-content:space-between;z-index:2}
+    .figure{position:relative;width:70px;height:125px;background:#4a3326;border-radius:48% 48% 28% 28%}
+    .figure:before{content:"";position:absolute;width:38px;height:38px;border-radius:50%;background:#3e2b22;left:16px;top:-22px}
+    .deer:after{content:"";position:absolute;left:14px;top:-54px;width:44px;height:40px;border-left:4px solid #4a3326;border-right:4px solid #4a3326;border-radius:60% 60% 0 0;transform:skewX(-13deg)}
+    .fox{height:100px;width:80px;border-radius:45% 45% 20% 20%;background:#8e3f2f}
+    .fox:after{content:"";position:absolute;width:88px;height:28px;background:#8e3f2f;border-radius:100% 0 100% 100%;left:42px;bottom:7px;transform:rotate(18deg)}
+    .fairy{height:105px;width:62px}
+    .fairy .wing{position:absolute;width:66px;height:36px;border:1px solid rgba(244,239,218,.8);background:rgba(234,236,213,.28);border-radius:80% 20% 80% 20%;top:18px}
+    .fairy .wing.l{left:-50px;transform:rotate(15deg)} .fairy .wing.r{right:-50px;transform:scaleX(-1) rotate(15deg)}
+    .cat{height:90px;width:58px}
+    .cat:after{content:"";position:absolute;width:52px;height:52px;border:8px solid #3e2b22;border-left-color:transparent;border-bottom-color:transparent;border-radius:50%;right:-44px;bottom:4px;transform:rotate(18deg)}
+    .paper-card{
+      background:rgba(250,241,222,.78);backdrop-filter:blur(3px);
+      border:1px solid rgba(76,57,37,.14);box-shadow:var(--shadow);border-radius:28px;
+    }
+    section{padding:74px 0}
+    .section-head{max-width:760px;margin-bottom:30px}
+    .section-head h2{font-size:clamp(2.25rem,5vw,4rem);font-weight:500;line-height:1.02;margin:8px 0 14px;color:var(--ink)}
+    .section-head p{font-size:1.1rem;line-height:1.7;color:#514438}
+    .story-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+    .story-card{padding:32px}
+    .story-card h3{font-size:1.55rem;margin:0 0 10px;color:var(--wine)}
+    .story-card p{font-size:1.03rem;line-height:1.7;margin:0;color:#55483d}
+    .ornament{text-align:center;color:var(--ink);font-size:1.5rem;letter-spacing:.4em;margin:10px 0}
+    .capture{position:relative}
+    .capture:before{content:"";position:absolute;inset:40px 0;background:rgba(45,109,110,.11);z-index:-1;transform:skewY(-2deg)}
+    .form-shell{display:grid;grid-template-columns:.9fr 1.1fr;gap:0;overflow:hidden}
+    .form-copy{padding:44px;background:var(--deep);color:#f6ecd8}
+    .form-copy h2{font-size:clamp(2.2rem,4vw,3.6rem);font-weight:500;line-height:1;margin:0 0 18px}
+    .form-copy p{font-size:1.05rem;line-height:1.68;color:#dfd5c1}
+    .format-pills{display:flex;gap:9px;margin-top:24px;flex-wrap:wrap}
+    .pill{font-family:var(--sans);font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;border:1px solid rgba(255,255,255,.22);padding:8px 11px;border-radius:999px}
+    form{padding:38px;background:rgba(250,241,222,.95)}
+    .field{margin-bottom:16px}
+    label{display:block;font-family:var(--sans);font-weight:750;font-size:.86rem;margin-bottom:7px;color:#3b352e}
+    input[type="text"],input[type="email"],input[type="tel"]{
+      width:100%;border:1px solid rgba(55,48,40,.2);background:#fffaf0;border-radius:12px;padding:14px 15px;
+      font:inherit;font-size:1rem;color:#2b2c27;outline:none;transition:.2s border,.2s box-shadow
+    }
+    input:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(45,109,110,.12)}
+    .check{display:flex;gap:10px;align-items:flex-start;margin:15px 0;font-family:var(--sans);font-size:.78rem;line-height:1.45;color:#5a5045}
+    .check input{margin-top:3px}
+    .submit{width:100%;margin-top:10px;padding:15px 22px}
+    .micro{font-family:var(--sans);font-size:.74rem;line-height:1.5;color:#776a5e;margin-top:13px}
+    .status{display:none;margin-top:14px;font-family:var(--sans);font-size:.86rem;padding:11px 13px;border-radius:10px}
+    .status.show{display:block}.status.err{background:#f3d8d0;color:#6d2c24}.status.ok{background:#dce8df;color:#244f36}
+    .unlock{display:none;padding:42px;text-align:center}.unlock.show{display:block}
+    .unlock h2{font-size:clamp(2.3rem,5vw,4rem);font-weight:500;margin:0 0 12px}
+    .unlock p{max-width:620px;margin:0 auto 26px;line-height:1.7;color:#55483d}
+    .download-row{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+    .privacy{padding-top:28px}
+    details{border-top:1px solid var(--line);padding:18px 0;font-family:var(--sans);color:#5a5045}
+    summary{cursor:pointer;font-weight:800;color:#3a403b}
+    details p{line-height:1.6;font-size:.86rem}
+    footer{padding:34px 0 48px;text-align:center;font-family:var(--sans);font-size:.78rem;color:#6d6258}
+    @media (max-width:820px){
+      .hero{padding-bottom:44px}.hero-grid,.story-grid,.form-shell{grid-template-columns:1fr}
+      .poster-scene{min-height:440px;order:-1;border-radius:28px}
+      .sun{width:145px;height:145px;top:128px}.waterfall{top:238px;height:130px}
+      .figures{bottom:90px;transform:scale(.82);transform-origin:center bottom;left:4%;right:0}
+      .form-copy,form{padding:28px}.story-card{padding:25px}
+      h1{font-size:clamp(3.5rem,18vw,6.1rem)}
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">uma leitura especial</div>
+      <div class="hero-grid">
+        <div>
+          <div class="kicker">A História Esquecida dos Norús</div>
+          <h1>O Vale da Inocência</h1>
+          <p class="subtitle">O conto que saiu do papel e encontrou o palco.</p>
+          <p class="lead">Entre natureza, descoberta e encantamento, conheça gratuitamente a história original que inspira a adaptação teatral de <em>O Vale da Inocência</em>.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#receber">Receber o conto gratuitamente ↓</a>
+            <a class="btn btn-outline" href="#historia">Conhecer a história</a>
+          </div>
+          <p class="event-line"><strong>24 de outubro · 18h</strong><br>Teatro Casa da Música Sônia Cabral · Vitória — ES</p>
+        </div>
+        <div class="poster-scene" aria-label="Ilustração inspirada no universo de O Vale da Inocência">
+          <div class="sun"></div><div class="cliff"></div><div class="cliff r"></div><div class="waterfall"></div><div class="branch"></div>
+          <div class="figures">
+            <div class="figure deer"></div>
+            <div class="figure fox"></div>
+            <div class="figure fairy"><span class="wing l"></span><span class="wing r"></span></div>
+            <div class="figure cat"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="historia">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">Do conto ao palco</div>
+          <h2>Antes da cortina abrir, existe uma história para descobrir.</h2>
+          <p><em>O Vale da Inocência</em> faz parte de <strong>A História Esquecida dos Norús</strong>. Agora, esse universo ganha também uma adaptação teatral — e você pode conhecer gratuitamente o conto em sua versão digital.</p>
+        </div>
+        <div class="story-grid">
+          <article class="paper-card story-card"><h3>Natureza e encantamento</h3><p>Um vale, criaturas extraordinárias e um encontro capaz de transformar a forma como a inocência enxerga o mundo.</p></article>
+          <article class="paper-card story-card"><h3>Leia no seu formato</h3><p>Depois de preencher seus dados, escolha entre PDF e ePub e leve a história com você para ler quando quiser.</p></article>
+        </div>
+        <div class="ornament">❧ ❦ ❧</div>
+      </div>
+    </section>
+
+    <section class="capture" id="receber">
+      <div class="wrap">
+        <div class="paper-card form-shell" id="captureShell">
+          <div class="form-copy">
+            <div class="kicker" style="color:#e2ad65">Leitura gratuita</div>
+            <h2>Receba O Vale da Inocência</h2>
+            <p>Preencha seus dados para liberar imediatamente a leitura digital. Você escolhe o formato depois do cadastro.</p>
+            <div class="format-pills"><span class="pill">PDF</span><span class="pill">ePub</span><span class="pill">gratuito</span></div>
+          </div>
+          <form id="leadForm" novalidate>
+            <div class="field"><label for="nome">Nome</label><input id="nome" name="nome" type="text" autocomplete="name" required placeholder="Como podemos chamar você?"></div>
+            <div class="field"><label for="email">E-mail</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="voce@exemplo.com"></div>
+            <div class="field"><label for="whatsapp">WhatsApp</label><input id="whatsapp" name="whatsapp" type="tel" autocomplete="tel" required placeholder="(00) 00000-0000"></div>
+            <label class="check"><input id="consentimento" name="consentimento" type="checkbox" required> <span>Autorizo o tratamento dos meus dados para liberar e viabilizar meu acesso gratuito ao conto digital.</span></label>
+            <label class="check"><input id="marketing" name="marketing" type="checkbox"> <span>Quero receber também novidades sobre obras, eventos e lançamentos. <strong>Opcional.</strong></span></label>
+            <button class="btn btn-primary submit" type="submit">Liberar meu acesso</button>
+            <div id="status" class="status" role="status"></div>
+            <p class="micro">Seus dados não ficam armazenados nesta página pública. Eles são enviados para a base privada configurada pelos responsáveis pela ação.</p>
+          </form>
+        </div>
+
+        <div id="unlock" class="paper-card unlock" aria-live="polite">
+          <div class="kicker">Acesso liberado</div>
+          <h2>Boa leitura.</h2>
+          <p>Escolha o formato que preferir para entrar no universo de <em>O Vale da Inocência</em>.</p>
+          <div class="download-row">
+            <a id="pdfButton" class="btn btn-primary" href="#" target="_blank" rel="noopener">Abrir PDF</a>
+            <a id="epubButton" class="btn btn-outline" href="#" target="_blank" rel="noopener">Baixar ePub</a>
+          </div>
+        </div>
+
+        <div class="privacy">
+          <details id="privacidade">
+            <summary>Privacidade e uso dos dados</summary>
+            <p>Nome, e-mail e WhatsApp são coletados para liberar o conteúdo solicitado e registrar a origem da ação. O recebimento de novidades é opcional e depende de consentimento separado. Os dados devem ser armazenados em base privada, nunca no repositório público da página.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap">O Vale da Inocência · A História Esquecida dos Norús</div></footer>
+
+  <script>
+    const CONFIG = {
+      endpoint: "", // URL /exec do Google Apps Script
+      pdfUrl: "",   // URL definitiva do PDF
+      epubUrl: ""   // URL definitiva do ePub
+    };
+
+    const form = document.getElementById("leadForm");
+    const statusBox = document.getElementById("status");
+    const shell = document.getElementById("captureShell");
+    const unlock = document.getElementById("unlock");
+    const pdfButton = document.getElementById("pdfButton");
+    const epubButton = document.getElementById("epubButton");
+    const phone = document.getElementById("whatsapp");
+
+    phone.addEventListener("input", () => {
+      let v = phone.value.replace(/\D/g,"").slice(0,11);
+      if (v.length > 10) phone.value = v.replace(/(\d{2})(\d{5})(\d{4})/,"($1) $2-$3");
+      else if (v.length > 6) phone.value = v.replace(/(\d{2})(\d{4})(\d{0,4})/,"($1) $2-$3");
+      else if (v.length > 2) phone.value = v.replace(/(\d{2})(\d{0,5})/,"($1) $2");
+      else phone.value = v;
+    });
+
+    function tracking(){
+      const q = new URLSearchParams(location.search);
+      return {
+        utm_source:q.get("utm_source") || "direto",
+        utm_medium:q.get("utm_medium") || "",
+        utm_campaign:q.get("utm_campaign") || "",
+        utm_content:q.get("utm_content") || "",
+        referrer:document.referrer || "",
+        landing_url:location.href
+      };
+    }
+
+    function showStatus(message,type){
+      statusBox.textContent = message;
+      statusBox.className = "status show " + type;
+    }
+
+    function unlockDownloads(){
+      if (CONFIG.pdfUrl) pdfButton.href = CONFIG.pdfUrl;
+      else pdfButton.style.display = "none";
+      if (CONFIG.epubUrl) epubButton.href = CONFIG.epubUrl;
+      else epubButton.style.display = "none";
+      shell.style.display = "none";
+      unlock.classList.add("show");
+      unlock.scrollIntoView({behavior:"smooth",block:"center"});
+    }
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      if (!form.reportValidity()) return;
+      if (!CONFIG.endpoint){
+        showStatus("A página está pronta, mas o endpoint de captura ainda precisa ser conectado antes da publicação.", "err");
+        return;
+      }
+
+      const button = form.querySelector("button[type=submit]");
+      button.disabled = true;
+      button.textContent = "Liberando acesso…";
+
+      const payload = {
+        nome:document.getElementById("nome").value.trim(),
+        email:document.getElementById("email").value.trim(),
+        whatsapp:phone.value.trim(),
+        consentimento:document.getElementById("consentimento").checked,
+        marketing:document.getElementById("marketing").checked,
+        obra:"O Vale da Inocência",
+        origem:"Landing Page",
+        campanha:"vale-da-inocencia",
+        ...tracking()
+      };
+
+      try{
+        await fetch(CONFIG.endpoint,{
+          method:"POST",
+          mode:"no-cors",
+          headers:{"Content-Type":"text/plain;charset=utf-8"},
+          body:JSON.stringify(payload)
+        });
+        unlockDownloads();
+      }catch(err){
+        showStatus("Não foi possível registrar seus dados agora. Tente novamente em instantes.", "err");
+        button.disabled = false;
+        button.textContent = "Liberar meu acesso";
+      }
+    });
+  </script>
+</body>
+</html>
