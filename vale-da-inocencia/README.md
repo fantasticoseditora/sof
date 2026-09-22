@@ -26,15 +26,17 @@ URL do QR Code com rastreamento:
 
 QR Code → landing → nome + e-mail + WhatsApp → Google Sheet privada → liberação de PDF/ePub.
 
-## Conexões finais
+## Integração de leads
 
-1. Abra a planilha **Leads — O Vale da Inocência**.
-2. Crie um projeto em `script.google.com` e cole `apps-script.gs`.
-3. Execute `setupSheet` uma vez para autorizar a conexão com a planilha.
-4. Implante como **App da Web**, executando como o proprietário e permitindo acesso a qualquer pessoa.
-5. Cole a URL terminada em `/exec` no campo `endpoint` de `config.js`.
-6. Insira em `config.js` as URLs finais de `pdfUrl` e `epubUrl`.
-7. Faça um cadastro de teste e confirme uma nova linha na aba `Leads`.
+- Planilha privada: **Leads — O Vale da Inocência**.
+- Endpoint do Google Apps Script implantado como **App da Web**.
+- Execução: proprietário da planilha.
+- Acesso: qualquer pessoa pode enviar; os leads não ficam públicos.
+- A URL `/exec` está configurada em `config.js`.
+
+## Conexão restante
+
+Insira em `config.js` as URLs finais de `pdfUrl` e `epubUrl` antes do início da campanha.
 
 ## Dados registrados
 
