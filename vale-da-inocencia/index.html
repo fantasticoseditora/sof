@@ -132,7 +132,13 @@
   </main>
 
   <footer><div class="page-shell">O Vale da Inocência · A História Esquecida dos Norús</div></footer>
-  <script src="config-live.js"></script>
-  <script src="app.js?v=3" defer></script>
+  <script>
+    window.VALE_CONFIG = Object.freeze({
+      endpoint: "https://script.google.com/macros/s/AKfycbzl-7h50AjRmlLxazmFExWjVovo85eLhyxup5OZA7fHMhP69mL26HnWf2v7JwjGexov1g/exec",
+      pdfUrl: "",
+      epubUrl: ""
+    });
+  </script>
+  <script src="app.js?v=4" defer></script>
 </body>
 </html>
