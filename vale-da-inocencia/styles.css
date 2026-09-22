@@ -115,6 +115,15 @@ h1 {
 h1 span, h1 strong { display: block; }
 h1 strong { font-weight: 400; }
 
+.hero-author {
+  margin: 0 0 13px;
+  color: var(--deep);
+  font-size: 0.98rem;
+  font-style: italic;
+  letter-spacing: 0.025em;
+}
+.hero-author strong { font-weight: 700; }
+
 .hero-tagline {
   margin: 0 0 16px;
   color: var(--wine);

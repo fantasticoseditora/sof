@@ -2,6 +2,8 @@
 
 Landing mobile-first de captação para a leitura gratuita de **O Vale da Inocência — A História Esquecida dos Norús**.
 
+Autor: **Thalles Waichert** (grafia confirmada diretamente pela assinatura de e-mail do autor).
+
 ## URL pública
 
 `https://fantasticoseditora.github.io/sof/vale-da-inocencia/`
@@ -38,7 +40,7 @@ QR Code → landing → nome + e-mail + WhatsApp → Google Sheet privada → li
 
 ## Arquivos digitais
 
-Os botões de pós-cadastro apontam para as versões revisadas em PDF e ePub. Os dois formatos são gerados a partir do mesmo texto-mestre, para evitar divergências, e foram validados antes da publicação.
+Os botões de pós-cadastro apontam para as versões revisadas em PDF e ePub. Os dois formatos são gerados a partir do mesmo texto-mestre, para evitar divergências, e foram validados antes da publicação. A autoria aparece na página de rosto e nos metadados dos dois arquivos.
 
 ## Revisão textual
 
