@@ -32,11 +32,11 @@ QR Code → landing → nome + e-mail + WhatsApp → Google Sheet privada → li
 - Endpoint do Google Apps Script implantado como **App da Web**.
 - Execução: proprietário da planilha.
 - Acesso: qualquer pessoa pode enviar; os leads não ficam públicos.
-- A URL `/exec` está configurada no bloco `VALE_CONFIG`, ao final de `index.html`.
+- A URL `/exec` está configurada no objeto `config`, no início de `app.js`.
 
 ## Conexão restante
 
-Insira no bloco `VALE_CONFIG`, ao final de `index.html`, as URLs finais de `pdfUrl` e `epubUrl` antes do início da campanha.
+Insira no objeto `config`, no início de `app.js`, as URLs finais de `pdfUrl` e `epubUrl` antes do início da campanha.
 
 ## Dados registrados
 
