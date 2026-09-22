@@ -19,6 +19,8 @@ URL do QR Code com rastreamento:
 - `apps-script.gs`: endpoint para registrar leads na Google Sheet privada.
 - `assets/hero-vale-da-inocencia.webp`: hero principal.
 - `assets/hero-vale-da-inocencia.jpg`: fallback do hero.
+- `downloads/o-vale-da-inocencia.pdf`: conto em PDF exportado do Google Docs.
+- `downloads/o-vale-da-inocencia.epub`: conto em ePub exportado do Google Docs.
 - `assets/qr-code-vale-da-inocencia.png`: QR Code em PNG.
 - `assets/qr-code-vale-da-inocencia.svg`: QR Code vetorial para impressão.
 
@@ -34,9 +36,9 @@ QR Code → landing → nome + e-mail + WhatsApp → Google Sheet privada → li
 - Acesso: qualquer pessoa pode enviar; os leads não ficam públicos.
 - A URL `/exec` está configurada no objeto `config`, no início de `app.js`.
 
-## Conexão restante
+## Arquivos digitais
 
-Insira no objeto `config`, no início de `app.js`, as URLs finais de `pdfUrl` e `epubUrl` antes do início da campanha.
+Os botões de pós-cadastro já apontam para as versões publicadas em PDF e ePub. Os arquivos foram exportados diretamente do Google Docs compartilhado e validados antes da publicação.
 
 ## Dados registrados
 
