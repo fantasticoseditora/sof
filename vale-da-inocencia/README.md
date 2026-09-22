@@ -17,10 +17,10 @@ URL do QR Code com rastreamento:
 - `app.js`: validação, UTMs, envio e liberação pós-cadastro.
 - `config-live.js`: cópia de referência da configuração.
 - `apps-script.gs`: endpoint para registrar leads na Google Sheet privada.
-- `assets/hero-vale-da-inocencia.webp`: hero principal.
-- `assets/hero-vale-da-inocencia.jpg`: fallback do hero.
-- `downloads/o-vale-da-inocencia.pdf`: conto em PDF exportado do Google Docs.
-- `downloads/o-vale-da-inocencia.epub`: conto em ePub exportado do Google Docs.
+- `assets/hero-vale-da-inocencia-cartaz.webp`: hero principal inspirado na linguagem ilustrada do cartaz.
+- `assets/hero-vale-da-inocencia-cartaz.jpg`: fallback e imagem de compartilhamento.
+- `downloads/o-vale-da-inocencia.pdf`: conto revisado em PDF, no formato 15 × 21 cm.
+- `downloads/o-vale-da-inocencia.epub`: conto revisado em ePub 3.
 - `assets/qr-code-vale-da-inocencia.png`: QR Code em PNG.
 - `assets/qr-code-vale-da-inocencia.svg`: QR Code vetorial para impressão.
 
@@ -38,7 +38,11 @@ QR Code → landing → nome + e-mail + WhatsApp → Google Sheet privada → li
 
 ## Arquivos digitais
 
-Os botões de pós-cadastro já apontam para as versões publicadas em PDF e ePub. Os arquivos foram exportados diretamente do Google Docs compartilhado e validados antes da publicação.
+Os botões de pós-cadastro apontam para as versões revisadas em PDF e ePub. Os dois formatos são gerados a partir do mesmo texto-mestre, para evitar divergências, e foram validados antes da publicação.
+
+## Revisão textual
+
+A revisão preservou a voz e o estilo do autor. Foram corrigidas ortografia, pontuação de diálogos, concordância, regência, crase, colocação pronominal, tempos verbais e a inconsistência de grafia `Eliah`/`Elaiah`. O Google Docs original permaneceu inalterado.
 
 ## Dados registrados
 
